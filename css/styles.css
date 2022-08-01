@@ -1,5 +1,7 @@
 /*=========================Сброс========================= */
 .list {
+            /* padding-top: 32px;
+        padding-bottom: 32px; */
     list-style: none;
     text-decoration: none;
     font-family:  inherit;
@@ -164,10 +166,14 @@ box-sizing: content-box;
     margin-left: 30px;
 }
 .listmp{
-        padding-top: 32px;
-        padding-bottom: 32px;
+    list-style: none;
+    text-decoration: none;
+    font-family:  inherit;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-.list .menu-li:not(:last-child){
+.listmp .menu-li:not(:last-child){
     margin-right: 50px;
 
 }
