@@ -614,6 +614,9 @@ color: var(--primary-text-color);
     background-color: #ffffff;
 }
 .modal-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -623,10 +626,21 @@ color: var(--primary-text-color);
     background-color: transparent;
     border: 1px solid var(--main-background-section-two);
     padding: 0;
-    
-    
-
 }
+.modal-close-btn:hover, 
+.modal-close-btn:focus{
+    border-color: var(--logo-color-blue-blue);
+}
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+    fill: var(--logo-color-blue-blue);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* ======================== /MODAL WINDOW ==================== */
 
 
