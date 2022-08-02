@@ -40,6 +40,9 @@ body {
 button{
     cursor: pointer;
 }
+body:focus {
+transition: var(--transition-dur-and-func);
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -72,13 +75,17 @@ button{
     ---font-size14: 14px;
     --shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    --transition-dur-and-fund: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* --transition-dur-and-func: 250ms linear; */
+    --transition-duration: 2s;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 /* ===фокус=изменение=цвета=============================== */
 .menu-item:hover,
 .menu-item:focus {
     color: var(--logo-color-blue-blue);
 }
+
 .menu-item-van:hover,
 .menu-item-van:focus
 {
@@ -88,9 +95,11 @@ button{
 .main-button:focus {
     background-color: var(--homepage-button-color);
 }
+
 .smartphone:hover,
-.smartphone:focus {
+.smartphone:focus{
     fill:var(--logo-color-blue-blue);
+    
 }
 /* ===header */
 .rem {
@@ -136,22 +145,26 @@ box-sizing: content-box;
 .menu-item:focus .icon-envelope
 {
     fill: var(--logo-color-blue-blue);
+    transition: fill var(--transition-dur-and-func);
 }
 .menu-item:hover .icon-smartphone,
 .menu-item:focus .icon-smartphone
 {
     fill: var(--logo-color-blue-blue);
+    transition: fill var(--transition-dur-and-func);
 }
 
 .menu-item-van:hover .icon-envelope,
 .menu-item-van:focus .icon-envelope
 {
     fill: var(--logo-color-blue-blue);
+    transition: fill var(--transition-dur-and-func);
 }
 .menu-item-van:hover .icon-smartphone,
 .menu-item-van:focus .icon-smartphone
 {
     fill: var(--logo-color-blue-blue);
+    transition: fill var(--transition-dur-and-func);
 }
 
 .yu{
@@ -199,6 +212,9 @@ box-sizing: content-box;
     font-weight: 500;
     line-height: 1.1721;
     letter-spacing: 0.02em;
+    transition: var(--transition-timing-function);
+
+
 }
 .menu-item:hover,
 .menu-item:focus {
@@ -214,6 +230,8 @@ box-sizing: content-box;
     bottom: -1px;
     border-radius: 2px;
     background-color: rgba(0, 0, 0, 0);
+    
+    
 }
 .menu-item:hover::after,
 .menu-item:focus::after {
@@ -231,20 +249,8 @@ box-sizing: content-box;
 .current-li::after {
     background-color: var(--logo-color-blue-blue);
 }
-/* ============================================================================= */
-
 /* ===/underline============================================================= */
-.menu-item1{
-    position: relative;
-    display: inline-block;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--border-top-color);
-    
-    padding-top: 32px;
-    padding-bottom: 32px;
-    line-height: 1.1721;
-}
+
 .menu-item-van{
     display: flex;
     text-decoration: none;
@@ -400,6 +406,7 @@ letter-spacing: 0.03em;
 .social-link{
     margin-top: 16px;
     justify-content: space-between;
+
 }
 .social-link:not(:last-child) {
     margin-right: 10px;
@@ -414,8 +421,13 @@ letter-spacing: 0.03em;
 .list-linkrem:hover .socail-list-icon,
 .list-linkrem:focus .socail-list-icon {
     fill: var(--main-header-background-size);
-}
 
+}
+.socail-list-icon{
+    transition: fill var(--transition-timing-function);
+    transition: fill var(--transition-duration);
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .list-linkrem{
     display: flex;
     justify-content: center;
@@ -424,6 +436,9 @@ letter-spacing: 0.03em;
     height: 44px;
     border-radius: 50%;
     background-color: var(--main-header-background-size);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 }
 .name{
 font-style: normal;
@@ -458,6 +473,8 @@ color: var(--primary-text-color);
 /* ===Постоянные клиенты==================================== */
 .client-list-icon{
     fill: #AFB1B8;
+    transition: fill var(--transition-timing-function);
+    transition: fill var(--transition-duration);
 }
 .client:hover .client-list-icon,
 .client:focus .client-list-icon
@@ -474,6 +491,8 @@ color: var(--primary-text-color);
         border: solid 1px #AFB1B8;
         border-radius: 4px;
         cursor: pointer;
+        transition: var(--transition-timing-function);
+        transition: var(--transition-duration);
 }
 .client:hover,
 .client:focus {
@@ -611,7 +630,9 @@ cursor:pointer;
     padding-bottom: 63px;
     /* overflow: scroll; */
     transform: translate(0,100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
+
 }
 .team-list-item:hover .overlay,
 .team-list-item:focus .overlay
@@ -685,8 +706,8 @@ color: var(--primary-text-color);
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: all 0.8s ease 0s;
-    /* transition: opacity var(--transition-dur-and-fund), visibility var(--transition-dur-and-fund), translate var(--transition-dur-and-fund); */
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
 }
 .modal{
     position: relative;
@@ -711,22 +732,28 @@ color: var(--primary-text-color);
     background-color: transparent;
     border: 1px solid var(--main-background-section-two);
     padding: 0;
-    
+    transition: border-color var(--transition-timing-function);
+    transition: border-color var(--transition-duration);
 }
 .modal-close-btn:hover, 
 .modal-close-btn:focus{
     border-color: var(--logo-color-blue-blue);
+    
 }
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
     fill: var(--logo-color-blue-blue);
 }
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.modal-close-btn-icon{
+    transition: fill var(--transition-timing-function);
+    transition: fill var(--transition-duration);
+}
 .backdrop.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: all 0.8s ease 0s;
-    transform: translate(0px, -100%);
+
     
 }
 
@@ -734,15 +761,13 @@ color: var(--primary-text-color);
 .current-page {
     color: var(--accent-color);
     position: relative;
-
-    transition-property: color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+    transition-property: color; 
 }
 
 .current-page:hover,
 .current-page:focus {
     color: var(--logo-color-blue-blue);
+    
 }
 
 .current-page::after {
@@ -752,4 +777,6 @@ color: var(--primary-text-color);
 .current-page:hover::after,
 .current-page:focus::after {
     background-color: var(--logo-color-blue-blue);
+    
 }
+
