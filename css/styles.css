@@ -7,6 +7,11 @@
     font-family:  inherit;
     display: flex;
 }
+a {
+    text-decoration: none;
+    font-style: normal;
+    list-style: none;
+}
 h1,h2,h3,h4,p {
 margin-top: 0;
 margin-bottom: 0;
@@ -89,6 +94,7 @@ button{
 }
 /* ===header */
 .rem {
+    
     display: flex;
     align-items: center;
 }
@@ -166,12 +172,14 @@ box-sizing: content-box;
     margin-left: 30px;
 }
 .listmp{
+    
+    /* position: relative; */
     list-style: none;
-    text-decoration: none;
-    font-family:  inherit;
+    
+    /* font-family:  inherit; */
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    /* padding-top: 32px;
+    padding-bottom: 32px; */
 }
 .listmp .menu-li:not(:last-child){
     margin-right: 50px;
@@ -181,20 +189,61 @@ box-sizing: content-box;
     margin-right: 30px;
 }    
 /* ===underline============================================================== */
-
-
+.menu-item{
+    position: relative;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    color: var(--border-top-color);
+    font-weight: 500;
+    line-height: 1.1721;
+    letter-spacing: 0.02em;
+}
+.menu-item:hover,
+.menu-item:focus {
+    color: var(--logo-color-blue-blue);
+    outline: none;
+}
+.menu-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -1px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.menu-item:hover::after,
+.menu-item:focus::after {
+    background-color: var(--logo-color-blue-blue);
+}
+.current-li {
+    color: var(--logo-color-blue-blue);
+    position: relative;
+    transition-property: color;
+}
+.current-li:hover,
+.current-li:focus {
+    color: var(--logo-color-blue-blue);
+}
+.current-li::after {
+    background-color: var(--logo-color-blue-blue);
+}
 /* ============================================================================= */
 
 /* ===/underline============================================================= */
-
-
-.menu-item{
-
-    display: flex;
-    text-decoration: none;
+.menu-item1{
+    position: relative;
+    display: inline-block;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--border-top-color);
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+    line-height: 1.1721;
 }
 .menu-item-van{
     display: flex;
@@ -693,7 +742,7 @@ color: var(--primary-text-color);
 
 .current-page:hover,
 .current-page:focus {
-    color: var(--hover-background-color);
+    color: var(--logo-color-blue-blue);
 }
 
 .current-page::after {
@@ -702,5 +751,5 @@ color: var(--primary-text-color);
 
 .current-page:hover::after,
 .current-page:focus::after {
-    background-color: var(--hover-background-color);
+    background-color: var(--logo-color-blue-blue);
 }
