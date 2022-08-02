@@ -726,6 +726,7 @@ color: var(--primary-text-color);
     background-color: rgba(0, 0, 0, 0.2);
     transition: var(--transition-timing-function);
     transition: var(--transition-duration);
+
 }
 .modal{
     position: relative;
@@ -735,6 +736,7 @@ color: var(--primary-text-color);
     top: 50%;
     transform: translate(-50%,-50%);
     background-color: #ffffff;
+    border-radius: 4px;
     
 }
 .modal-close-btn{
@@ -794,7 +796,17 @@ color: var(--primary-text-color);
 
 .current-page:hover::after,
 .current-page:focus::after {
-    background-color: var(--logo-color-blue-blue);
-    
+    background-color: var(--logo-color-blue-blue); 
+}
+.andriy{
+padding-top: 35%;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
 }
 
