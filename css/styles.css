@@ -737,6 +737,7 @@ color: var(--primary-text-color);
     transform: translate(-50%,-50%);
     background-color: #ffffff;
     border-radius: 4px;
+    box-shadow:var(--shadow);
     
 }
 .modal-close-btn{
@@ -800,6 +801,8 @@ color: var(--primary-text-color);
 }
 .andriy{
 padding-top: 35%;
+padding-left: 5%;
+padding-right: 5%;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
