@@ -203,7 +203,7 @@ box-sizing: content-box;
 .menu-item:hover,
 .menu-item:focus {
     color: var(--logo-color-blue-blue);
-    /* outline: none; */
+
 }
 .menu-item::after {
     content: '';
