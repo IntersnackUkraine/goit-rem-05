@@ -76,7 +76,7 @@ transition: var(--transition-dur-and-func);
     --shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
     /* --transition-dur-and-func: 250ms linear; */
-    --transition-duration: 2s;
+    --transition-duration: 250ms;
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
@@ -90,10 +90,14 @@ transition: var(--transition-dur-and-func);
 .menu-item-van:focus
 {
     color: var(--logo-color-blue-blue);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
 }
 .main-button:hover,
 .main-button:focus {
     background-color: var(--homepage-button-color);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
 }
 
 .smartphone:hover,
@@ -141,32 +145,38 @@ box-sizing: content-box;
 .icon-smartphone{
     fill: #757575;
 }
-.menu-item:hover .icon-envelope,
+/* ====================================== */
+/* .menu-item:hover .icon-envelope,
 .menu-item:focus .icon-envelope
 {
     fill: var(--logo-color-blue-blue);
-    transition: fill var(--transition-dur-and-func);
 }
 .menu-item:hover .icon-smartphone,
 .menu-item:focus .icon-smartphone
 {
     fill: var(--logo-color-blue-blue);
-    transition: fill var(--transition-dur-and-func);
-}
+} */
+/* ======================================= */
 
 .menu-item-van:hover .icon-envelope,
 .menu-item-van:focus .icon-envelope
 {
     fill: var(--logo-color-blue-blue);
-    transition: fill var(--transition-dur-and-func);
 }
 .menu-item-van:hover .icon-smartphone,
 .menu-item-van:focus .icon-smartphone
 {
     fill: var(--logo-color-blue-blue);
-    transition: fill var(--transition-dur-and-func);
 }
-
+/* ========================================= */
+.icon-smartphone{
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
+}
+.icon-envelope{
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
+}
 .yu{
     margin-right: 10px;
 }
@@ -213,8 +223,8 @@ box-sizing: content-box;
     line-height: 1.1721;
     letter-spacing: 0.02em;
     transition: var(--transition-timing-function);
-
-
+    transition: var(--transition-duration);
+    
 }
 .menu-item:hover,
 .menu-item:focus {
@@ -230,12 +240,15 @@ box-sizing: content-box;
     bottom: -1px;
     border-radius: 2px;
     background-color: rgba(0, 0, 0, 0);
+
     
     
 }
 .menu-item:hover::after,
 .menu-item:focus::after {
     background-color: var(--logo-color-blue-blue);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
 }
 .current-li {
     color: var(--logo-color-blue-blue);
@@ -513,7 +526,7 @@ color: var(--primary-text-color);
 }
 
 .footer-icon{
-    fill: var(--main-header-background-size)
+    fill: var(--main-header-background-size);
 }
 .list-linkrem-footer{
     display: flex;
@@ -527,6 +540,8 @@ color: var(--primary-text-color);
 .list-linkrem-footer:hover,
 .list-linkrem-footer:focus {
     background-color: var(--logo-color-blue-blue);
+    transition: var(--transition-timing-function);
+    transition:  var(--transition-duration);
 }
 .name-footer{
 font-weight: 700;
@@ -593,13 +608,16 @@ color: rgba(255, 255, 255, 0.6);
     padding: 6px 22px;
     border-radius: 4px;
     letter-spacing: 0.03em;
+    
 }
 .button-portolio:hover,
 .button-portolio:focus {
     background-color: var(--logo-color-blue-blue);
     color: var(--main-header-background-size);
     cursor: pointer;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
+    transition: var(--transition-timing-function);
+    transition: var(--transition-duration);
 }
 .qwet:hover{
     text-decoration: none;
